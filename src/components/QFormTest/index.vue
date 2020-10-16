@@ -10,7 +10,13 @@
                     :label-width="formInfo.labelWidth"
                     @handle-event="onFormInfoEvent"
                     className="form-wrap"
-                />
+                >
+                    <template v-slot:hahaha>
+                        <div>
+                            <span>供应商退款金额: {{refundMoney}} </span>
+                        </div>
+                    </template>
+                </q-form>
             </el-tab-pane>
             <el-tab-pane label="表单搜索">
                 <div class="m100">
@@ -52,6 +58,7 @@ export default {
 
     data() {
         return {
+            refundMoney: '￥1200',
             formInfo: {
                 ref: null,
                 data: {

@@ -10,7 +10,7 @@
         >
             <!-- solt -->
             <template v-if="item.type === 'slot'">
-                <slot :name="'form-' + item.value" />
+                <slot :name="item.value" />
             </template>
 
             <!-- 纯文本 -->

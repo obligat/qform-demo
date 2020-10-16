@@ -56,6 +56,11 @@ export const formField = [
         options: selectOption
     },
     {
+        type: 'slot',
+        label: 'Slot 测试：',
+        value: 'hahaha'
+    },
+    {
         label: '日期时间：',
         value: 'date_test',
         type: 'date',

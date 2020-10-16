@@ -176,8 +176,16 @@ export default {
         },
 
         // 绑定的相关事件
-        handleEvent(event) {
-            this.$emit("handle-event", event);
+        handleEvent(event, data) {
+            switch (event) {
+                case "submit":
+                case "search":
+                case "reset":
+                    this.$emit(event, data);
+                    break;
+                default:
+                    this.$emit("handle-event", event, data);
+            }
         },
     },
 };

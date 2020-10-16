@@ -8,7 +8,8 @@
                     :data="formInfo.data"
                     :field-list="formInfo.fieldList"
                     :label-width="formInfo.labelWidth"
-                    @handle-event="onFormInfoEvent"
+                    @submit="onSubmit"
+                    @reset="onReset('formInfo')"
                     className="form-wrap"
                 />
             </el-tab-pane>
@@ -104,6 +105,10 @@ export default {
                     this.formInfo.ref.resetFields();
                     break;
             }
+        },
+
+        onReset(form) {
+            this[form].ref.resetFields();
         },
 
         onSubmit() {

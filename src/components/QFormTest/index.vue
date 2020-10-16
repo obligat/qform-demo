@@ -8,8 +8,7 @@
                     :data="formInfo.data"
                     :field-list="formInfo.fieldList"
                     :label-width="formInfo.labelWidth"
-                    @submit="onSubmit"
-                    @reset="onReset('formInfo')"
+                    @handle-event="onFormInfoEvent"
                     className="form-wrap"
                 />
             </el-tab-pane>

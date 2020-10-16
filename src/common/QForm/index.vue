@@ -182,6 +182,7 @@ export default {
                 case "search":
                 case "reset":
                     this.$emit(event, data);
+                    this.$emit("handle-event", event, data);
                     break;
                 default:
                     this.$emit("handle-event", event, data);

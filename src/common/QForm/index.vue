@@ -14,9 +14,9 @@
             </template>
 
             <!-- 纯文本 -->
-            <span v-if="item.type === 'text'" class="pure-txt">{{
-                data[item.value]
-            }}</span>
+            <span v-if="item.type === 'text'" class="pure-txt">
+                {{ data[item.value] }}
+            </span>
 
             <!-- 普通输入框 -->
             <div class="flex-wrap" v-if="item.type === 'input'">

@@ -15,10 +15,10 @@
             <el-tab-pane label="表单搜索">
                 <div class="m100">
                     <q-form
-                        :ref-obj.sync="formInline.ref"
-                        :data="formInline.data"
-                        :field-list="formInline.fieldList"
-                        :label-width="formInline.labelWidth"
+                        :ref-obj.sync="formGrid.ref"
+                        :data="formGrid.data"
+                        :field-list="formGrid.fieldList"
+                        :label-width="formGrid.labelWidth"
                         @handle-event="onFormSearch"
                         className="grid"
                     />
@@ -31,6 +31,7 @@
                         :data="formInline.data"
                         :field-list="formInline.fieldList"
                         :label-width="formInline.labelWidth"
+                        @handle-event="onFormSearch"
                         inline
                     />
                 </div>
@@ -41,7 +42,7 @@
 
 <script>
 import QForm from "../../common/QForm/index";
-import { formField, formInlineField } from "./config";
+import { formField, formGridField, formInlineField } from "./config";
 
 export default {
     name: "QFormTest",
@@ -65,7 +66,7 @@ export default {
                 fieldList: formField,
                 labelWidth: "120px",
             },
-            formInline: {
+            formGrid: {
                 ref: null,
                 data: {
                     order_no: "",
@@ -75,6 +76,16 @@ export default {
                     contactMobile: "",
                     sale_name: "",
                     shop_name: "",
+                },
+                fieldList: formGridField,
+                labelWidth: "100px",
+            },
+            formInline: {
+                ref: null,
+                data: {
+                    order_no: "",
+                    status: "",
+                    departure_city: "",
                 },
                 fieldList: formInlineField,
                 labelWidth: "100px",

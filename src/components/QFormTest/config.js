@@ -95,8 +95,8 @@ export const formField = [
     }
 ];
 
-// inline
-export const formInlineField = [
+// grid
+export const formGridField = [
     {
         label: '订单号：',
         value: 'order_no',
@@ -131,6 +131,33 @@ export const formInlineField = [
     {
         label: '店铺：',
         value: 'shop_name',
+        type: 'input'
+    },
+    {
+        text: '搜索',
+        type: 'button',
+        event: 'search',
+        elType: 'primary'
+    }
+];
+
+
+// inline
+export const formInlineField = [
+    {
+        label: '订单号：',
+        value: 'order_no',
+        type: 'input'
+    },
+    {
+        label: '订单状态：',
+        value: 'status',
+        type: 'select',
+        options: selectOption
+    },
+    {
+        label: '出发地：',
+        value: 'departure_city',
         type: 'input'
     },
     {

@@ -8,6 +8,7 @@
                     :data="formInfo.data"
                     :field-list="formInfo.fieldList"
                     :label-width="formInfo.labelWidth"
+                    @handle-event="onFormInfoEvent"
                     className="form-wrap"
                 />
             </el-tab-pane>
@@ -18,6 +19,7 @@
                         :data="formInline.data"
                         :field-list="formInline.fieldList"
                         :label-width="formInline.labelWidth"
+                        @handle-event="onFormSearch"
                         className="grid"
                     />
                 </div>
@@ -78,6 +80,39 @@ export default {
                 labelWidth: "100px",
             },
         };
+    },
+
+    methods: {
+        // 表单提交
+        onFormInfoEvent(event) {
+            switch (event) {
+                case "submit":
+                    this.onSubmit();
+                    break;
+                case "reset":
+                    this.formInfo.ref.resetFields();
+                    break;
+            }
+        },
+
+        onSubmit() {
+            this.formInfo.ref.validate((valid) => {
+                if (valid) {
+                    alert("校验通过");
+                } else {
+                    alert("校验失败");
+                }
+            });
+        },
+
+        // 表单搜索
+        onFormSearch(event) {
+            switch (event) {
+                case "search":
+                    alert("searching...");
+                    break;
+            }
+        },
     },
 };
 </script>

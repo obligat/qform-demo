@@ -136,6 +136,7 @@ export const formInlineField = [
     {
         text: '搜索',
         type: 'button',
+        event: 'search',
         elType: 'primary'
     }
 ];

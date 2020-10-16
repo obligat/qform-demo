@@ -93,7 +93,7 @@
             <el-button
                 v-if="item.type === 'button'"
                 :type="item.elType"
-                @click="handleClick(item.event)"
+                @click="handleEvent(item.event)"
             >
                 {{ item.text }}
             </el-button>
@@ -178,11 +178,6 @@ export default {
         // 绑定的相关事件
         handleEvent(event) {
             this.$emit("handle-event", event);
-        },
-
-        // 派发按钮点击事件
-        handleClick(event, data) {
-            this.$emit("handle-click", event, data);
         },
     },
 };

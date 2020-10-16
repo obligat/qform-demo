@@ -85,13 +85,13 @@ export const formField = [
     {
         text: '提交',
         type: 'button',
-        elType: 'primary',
         event: 'submit'
     },
     {
         text: '重置',
         type: 'button',
-        event: 'reset'
+        event: 'reset',
+        styleType: 'defalut'
     }
 ];
 
@@ -136,11 +136,9 @@ export const formGridField = [
     {
         text: '搜索',
         type: 'button',
-        event: 'search',
-        elType: 'primary'
+        event: 'search'
     }
 ];
-
 
 // inline
 export const formInlineField = [
@@ -163,7 +161,6 @@ export const formInlineField = [
     {
         text: '搜索',
         type: 'button',
-        event: 'search',
-        elType: 'primary'
+        event: 'search'
     }
 ];

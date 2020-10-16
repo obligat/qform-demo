@@ -92,7 +92,7 @@
             <!-- 提交、重置 -->
             <el-button
                 v-if="item.type === 'button'"
-                :type="item.elType"
+                :type="item.styleType || 'primary'"
                 @click="handleEvent(item.event)"
             >
                 {{ item.text }}
